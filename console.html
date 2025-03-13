@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>JavaScript入門</title>
+  </head>
+  <body>
+    <script>
+      const sum = 1 + 1;
+      console.log(sum);
+
+      const pref = ['北海道', '青森', '秋田'];
+      console.log(pref);
+      console.table(pref);
+
+      console.clear();
+      console.error('エラーが発生しました');
+      console.warn('警告です');
+      console.info('情報です');
+
+      //カウンター・経過時間
+      let dice;
+      console.time('dice');
+      do {
+        dice = Math.floor(Math.random() * 6) + 1;
+        console.log(dice);
+        console.count('dice');
+      } while (dice !== 1);
+      console.timeEnd('dice');
+
+      //アサート
+      const tax = 1.1;
+      const price = 1000;
+      const intax = price * tax;
+      console.log(intax);
+      console.assert(intax === 1100, '計算が間違っています');
+    </script>
+  </body>
+</html>
