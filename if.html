@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>JavaScript入門</title>
+  </head>
+  <body>
+    <div>
+      <input type="text" id="myname" placeholder="おなまえ" />
+    </div>
+    <br />
+    <div>
+      <button id="send">送信する</button>
+    </div>
+
+    <script>
+      document.getElementById('send').addEventListener('click', () => {
+        const myname = document.getElementById('myname').value;
+
+        if (myname === '') {
+          alert('お名前が入力されていません。');
+        } else {
+          alert(myname + 'さん、こんにちは！');
+        }
+
+        /*
+        if (条件) {
+          条件が真の場合に実行する処理
+        } else {
+          条件が偽の場合に実行する処理
+        }
+        */
+      });
+    </script>
+  </body>
+</html>
