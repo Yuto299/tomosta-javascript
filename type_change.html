@@ -6,5 +6,16 @@
     <link rel="stylesheet" href="style.css" />
     <title>JavaScript入門</title>
   </head>
-  <body></body>
+  <body>
+    <script>
+      const num1 = window.prompt('数値を入力してください', '0');
+      const answer = Number(num1) + 10;
+      document.write(num1 + 'に10を足すと' + answer + 'です。');
+
+      //数字を文字列に変換
+      const num2 = 10;
+      const string1 = String(num2);
+      document.write('<br>' + string1);
+    </script>
+  </body>
 </html>
