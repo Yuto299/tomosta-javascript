@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>JavaScript入門</title>
+  </head>
+  <body>
+    <script>
+      let dice = 0;
+
+      while (dice != 1) {
+        //dice = 1は無限ループになる
+        dice = Math.floor(Math.random() * 6) + 1;
+        document.write(dice + '<br>');
+      }
+
+      /*
+      初期化処理
+      while (繰り返す条件) {
+        繰り返し処理
+        更新処理
+      }
+      */
+    </script>
+  </body>
+</html>
+
+<!-- 繰り返す回数が分からないときはwhile文を使う 繰り返す回数がが分かっているときはfor文を使う -->
