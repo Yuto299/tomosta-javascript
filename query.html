@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>JavaScript入門</title>
+  </head>
+  <body>
+    <p>1 + 1 =<span>?</span></p>
+    <p class="container">?</p>
+    <p id="output">?</p>
+
+    <p class="primary">1つ目の要素です</p>
+    <p class="primary">2つ目の要素です</p>
+    <script>
+      document.querySelector('p span').textContent = 1 + 1;
+      document.querySelector('.container').textContent = 'Hello, World!';
+      document.getElementById('output').textContent = 'こんにちは、世界！';
+
+      const elements = document.querySelectorAll('.primary');
+      elements.forEach((element) => {
+        element.style.color = 'red';
+      });
+    </script>
+  </body>
+</html>
