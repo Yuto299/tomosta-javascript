@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>JavaScript入門</title>
+  </head>
+  <body>
+    <dl>
+      <dt>お住まい</dt>
+      <dd>
+        <select name="pref" id="pref">
+          <option value="北海道">北海道</option>
+          <option value="岩手県">岩手県</option>
+          <option value="宮城県">宮城県</option>
+        </select>
+      </dd>
+      <dt>ご意見</dt>
+      <dd>
+        <textarea name="message" cols="30" rows="3"></textarea>
+      </dd>
+    </dl>
+    <div>
+      <button id="send">送信する</button>
+    </div>
+
+    <script>
+      document.getElementById('send').addEventListener('click', () => {
+        const pref = document.getElementById('pref').value;
+        console.log(pref);
+
+        const message = document.querySelector('textarea[name = "message"]').value;
+        console.log(message);
+        alert('送信しました');
+      });
+    </script>
+  </body>
+</html>
