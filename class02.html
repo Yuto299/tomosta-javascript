@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>JavaScript入門</title>
+  </head>
+  <body>
+    <script>
+      class Item {
+        name = '';
+        #stock = 0;
+
+        //これがないとエラーが出てしまう
+        get stock() {
+          console.log('getter');
+          return this.#stock;
+        }
+        set stock(value) {
+          if (value >= 0) {
+            console.log('setter');
+            this.#stock = value;
+          }
+        }
+
+        buy(count) {
+          if (this.#stock > count) {
+            this.#stock -= count;
+            return true;
+          } else {
+            return false;
+          }
+        }
+      }
+
+      let peach = new Item();
+      peach.stock = 5;
+      console.log(peach.stock);
+      peach.stock = -100;
+      console.log(peach.stock);
+    </script>
+  </body>
+</html>
