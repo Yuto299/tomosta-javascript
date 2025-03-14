@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>JavaScript入門</title>
+  </head>
+  <body>
+    <script>
+      //税込金額を求める関数
+      //アロー関数
+      const calcIntax = (price) => {
+        const intax = Math.round(price * 1.1);
+        return intax;
+      };
+
+      const calcIntax4 = (price) => {
+        return Math.round(price * 1.1);
+      };
+
+      const calcIntax5 = (price) => Math.round(price * 1.1);
+
+      //関数宣言
+      function calcIntax2(price) {
+        const intax = Math.round(price * 1.1);
+        return intax;
+      }
+
+      //関数式
+      const calcIntax3 = function (price) {
+        const intax = Math.round(price * 1.1);
+        return intax;
+      };
+
+      /*
+      const 関数名 = (引数) => {
+        処理
+        return 戻り値;
+      };
+      */
+
+      const price = 1000;
+      const intax = calcIntax(price);
+      const item2 = calcIntax(2000);
+      document.write(`税込金額は${intax}円です`);
+      document.write('<br>');
+      document.write(`税込金額は${item2}円です`);
+    </script>
+  </body>
+</html>
