@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>JavaScript入門</title>
+  </head>
+  <body>
+    <script>
+      class Item {
+        name;
+        stock;
+      }
+      class Food extends Item {
+        limit_date;
+      }
+
+      let peach = new Food();
+      peach.limit_date = '5';
+      peach.name = '桃';
+      console.log(peach);
+      let pencil = new Item();
+    </script>
+  </body>
+</html>
