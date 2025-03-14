@@ -20,6 +20,30 @@
       <dd>
         <textarea name="message" cols="30" rows="3"></textarea>
       </dd>
+      <dt>利用規約の確認</dt>
+      <dd>
+        <label><input type="checkbox" value="agree" id="agree" />同意します</label>
+      </dd>
+      <dt>オプションをご希望ですか？</dt>
+      <dd>
+        <ul>
+          <li>
+            <label><input type="radio" name="option1" value="はい" />はい</label>
+            <label><input type="radio" name="option1" value="いいえ" checked />いいえ</label>
+          </li>
+        </ul>
+      </dd>
+      <dt>好きな食べ物</dt>
+      <dd>
+        <ul>
+          <li>
+            <label><input type="checkbox" name="food[]" value="寿司" />寿司</label>
+            <!-- food[]は複数選択可能 -->
+            <label><input type="checkbox" name="food[]" value="中華" />中華</label>
+            <label><input type="checkbox" name="food[]" value="ステーキ" />ステーキ</label>
+          </li>
+        </ul>
+      </dd>
     </dl>
     <div>
       <button id="send">送信する</button>
@@ -32,7 +56,23 @@
 
         const message = document.querySelector('textarea[name = "message"]').value;
         console.log(message);
-        alert('送信しました');
+
+        const agree = document.getElementById('agree').checked;
+        if (!agree) {
+          alert('利用規約に同意してください');
+          console.log('利用規約に同意してください');
+        } else {
+          alert('送信しました');
+          console.log('送信しました');
+        }
+
+        const option1 = document.querySelector('input[name = "option1"]:checked').value;
+        console.log(option1);
+
+        const foods = document.querySelectorAll('input[name = "food[]"]:checked');
+        foods.forEach((food) => {
+          console.log(food.value);
+        });
       });
     </script>
   </body>
