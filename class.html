@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>JavaScript入門</title>
+  </head>
+  <body>
+    <script>
+      // クラスの定義
+      class Item {
+        name = '';
+        stock = 0;
+
+        buy(count) {
+          if (this.stock > count) {
+            this.stock -= count;
+            return true;
+          } else {
+            return false;
+          }
+        }
+      }
+
+      let peach = new Item();
+      peach.name = '桃';
+      console.log(peach.name);
+      peach.stock = 5;
+      console.log(peach.stock);
+      peach.buy(3);
+      console.log(peach.stock);
+    </script>
+  </body>
+</html>
